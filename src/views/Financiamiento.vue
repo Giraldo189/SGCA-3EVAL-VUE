@@ -5,6 +5,7 @@
         <thead>
     <tr>
        <th scope="col">Id Financiamiento</th>
+       <th scope="col">Marca</th>
        <th scope="col">Venta</th>
        <th scope="col">Monto</th>
        <th scope="col">Taza Interez</th>
@@ -16,6 +17,7 @@
      <tbody>
     <tr v-for="(financiamiento,index) in financiamientos":key="index">
         <th scope="row">{{index+1}}</th>
+        <td>{{ financiamiento.id_financiamiento }}</td>
         <td>{{ financiamiento.id_financiamiento }}</td>
         <td>{{ financiamiento.id_venta }}</td>
         <td>{{ financiamiento.monto_financiamiento }}</td>
@@ -40,7 +42,7 @@
     },
     mounted() {
        axios
-        .get('http://127.0.0.1:8000/api/Financiamientos')
+        .get('http://127.0.0.1:8000/api/financiamientos')
         .then(response => (this.financiamientos = response.data.financiamientos))
     },
     }

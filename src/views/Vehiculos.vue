@@ -13,7 +13,7 @@
 </tr>
  </thead>
  <tbody>
-<tr v-for="(vehiculo,index) in Vehiculos":key="index">
+<tr v-for="(vehiculo,index) in vehiculos":key="index">
     <th scope="row">{{index+1}}</th>
     <td>{{ vehiculo.id_vehiculos }}</td>
     <td>{{ vehiculo.marca }}</td>
