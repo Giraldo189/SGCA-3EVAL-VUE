@@ -17,11 +17,11 @@
     <tr v-for="(venta,index) in ventas":key="index">
         <th scope="row">{{index+1}}</th>
         <td>{{ venta.id_ventas }}</td>
-        <td>{{ ventas.id_vehiculo }}</td>
-        <td>{{ ventas.id_cliente }}</td>
-        <td>{{ ventas.id_empleado }}</td>
-        <td>{{ ventas.fecha_ventas }}</td>
-        <td>{{ ventas.precio_final }}</td>
+        <td>{{ venta.id_vehiculo }}</td>
+        <td>{{ venta.id_cliente }}</td>
+        <td>{{ venta.id_empleado }}</td>
+        <td>{{ venta.fecha_ventas }}</td>
+        <td>{{ venta.precio_final }}</td>
     
     </tr>
      </tbody>
@@ -29,17 +29,17 @@
     </div>
     </template>
     <script>
-    import { axios } from "axios";
+    import  axios  from 'axios';
 
     export default {
 
-    name:'venta',
+    name: 'Venta',
     data (){
         return{
             ventas:[]
         }
     },
-    mounted(){
+    mounted() {
        axios
         .get('http://127.0.0.1:8000/api/ventas')
         .then(response => (this.ventas = response.data.ventas))

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Listado Vehiculos</h1>
+        <h1>Listado Prueba De Conduccion</h1>
     <table class="table">
         <thead>
     <tr>
@@ -25,17 +25,17 @@
     </div>
     </template>
     <script>
-    import { axios } from "axios";
+    import  axios  from 'axios';
 
     export default {
 
-    name:'pruebasdeconducciones',
+    name: 'Pruebasdeconduccion',
     data (){
         return{
             pruebasdeconducciones:[]
         }
     },
-    mounted(){
+    mounted() {
        axios
         .get('http://127.0.0.1:8000/api/pruebasdeconducciones')
         .then(response => (this.pruebasdeconducciones = response.data.pruebasdeconducciones))

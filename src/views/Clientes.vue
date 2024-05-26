@@ -15,29 +15,29 @@
      <tbody>
     <tr v-for="(cliente,index) in clientes":key="index">
         <th scope="row">{{index+1}}</th>
-        <td>{{ clientes.id_cliente }}</td>
-        <td>{{ clientes.nombre }}</td>
-        <td>{{ clientes.apellido }}</td>
-        <td>{{ clientes.telefono }}</td>
-        <td>{{ clientes.email }}</td>
-        <td>{{ clientes.dirrecion }}</td>
+        <td>{{ cliente.id_cliente }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.apellido }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>{{ cliente.dirrecion }}</td>
     </tr>
      </tbody>
     </table>
     </div>
     </template>
     <script>
-    import { axios } from "axios";
+    import  axios  from 'axios';
 
     export default {
 
-    name:'clientes',
-    data (){
+    name: 'Cliente',
+    data(){
         return{
-            clientes:[]
+            clientes: []
         }
     },
-    mounted(){
+    mounted() {
        axios
         .get('http://127.0.0.1:8000/api/clientes')
         .then(response => (this.clientes = response.data.clientes))

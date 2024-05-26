@@ -28,17 +28,17 @@
 </div>
 </template>
 <script>
-    import { axios } from "axios";
+    import  axios  from 'axios';
 
     export default {
 
-    name:'vehiculos',
+    name: 'Vehiculo',
     data (){
         return{
             vehiculos:[]
         }
     },
-    mounted(){
+    mounted() {
        axios
         .get('http://127.0.0.1:8000/api/vehiculos')
         .then(response => (this.vehiculos = response.data.vehiculos))

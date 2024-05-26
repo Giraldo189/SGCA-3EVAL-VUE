@@ -28,19 +28,19 @@
     </div>
     </template>
     <script>
-    import { axios } from "axios";
+    import  axios  from 'axios';
 
     export default {
 
-    name:'financiamientos',
+    name: 'Financiamiento',
     data (){
         return{
             financiamientos:[]
         }
     },
-    mounted(){
+    mounted() {
        axios
-        .get('http://127.0.0.1:8000/api/financiamientos')
+        .get('http://127.0.0.1:8000/api/Financiamientos')
         .then(response => (this.financiamientos = response.data.financiamientos))
     },
     }

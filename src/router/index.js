@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Clientes from 'src/views/Clientes.vue';
-import Financiamientos from 'src/views/Financiamiento.vue';
-import Pruebadeconduccion from 'src/views/Pruebas_de_conduccion.vue';
-import Vehiculos from 'src/views/Vehiculos.vue';
-import Ventas from '/src/views/Ventas.vue';
+import Clientes from '../views/Clientes.vue';
+import Financiamientos from '../views/Financiamiento.vue';
+import Pruebadeconduccion from '../views/Pruebas_de_conduccion.vue';
+import Vehiculos from '../views/Vehiculos.vue';
+import Ventas from '../views/Ventas.vue';
 
 
 
@@ -16,27 +16,27 @@ const routes = [
   },
   {
     path: '/clientes',
-    name: 'Clientes',
+    name: 'Cliente',
     component: Clientes
   },
   {
     path: '/financiamientos',
-    name: 'Financiamientos',
+    name: 'Financiamiento',
     component: Financiamientos
   },
   {
     path: '/pruebadeconduccion',
-    name: 'pruebadeconduccion',
+    name: 'Pruebadeconduccion',
     component: Pruebadeconduccion
   },
   {
     path: '/vehiculos',
-    name: 'vehiculos',
+    name: 'Vehiculo',
     component: Vehiculos
   },
   {
     path: '/ventas',
-    name: 'ventas',
+    name: 'Venta',
     component: Ventas
   },
   {
