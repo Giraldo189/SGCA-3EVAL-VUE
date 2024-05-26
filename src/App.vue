@@ -2,6 +2,11 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/clientes">Clientes</router-link>
+    <router-link to="/financiamientos">Financiamientos</router-link>
+    <router-link to="/pruebadeconduccion">Pruebas de Conduccion</router-link>
+    <router-link to="/vehiculos">Vehiculos</router-link>
+    <router-link to="/ventas">Ventas</router-link>
   </nav>
   <router-view/>
 </template>
